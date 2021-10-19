@@ -4,6 +4,8 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+import base64
+import email
 
 """
 Gmail API python quickstart tutorial:
@@ -69,7 +71,11 @@ def main():
     print("==============================")
     # Gets the specified message.
     for msg_id in msg_id_list:
-        msg = service.users().messages().get(userId='me',id=msg_id)..execute()
+        msg = service.users().messages().get(userId='me',id=msg_id,format="raw").execute()
+        print(msg["snippet"])
+        msg_str = base64.urlsafe_b64decode(msg["raw"].encode('ASCII'))
+        mime_msg = email.message_from_bytes(msg_str)
+        print(mime_msg)
 
 
 if __name__ == '__main__':
