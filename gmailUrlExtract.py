@@ -62,12 +62,13 @@ def main():
     print("==============================")
 
     # get all messages in the specified label
-    msg_results = service.users().messages().list(userId='me',labelIds='Label_7090689821639516814',includeSpamTrash=True).execute()
+    labelId = 'Label_7090689821639516814'
+    msg_results = service.users().messages().list(userId='me',labelIds=labelId,includeSpamTrash=True).execute()
     msg_id_list= []
     if not msg_results:
         print('No msg found.')
     else:
-        print('print all messages info:')
+        print('print all messages info in label: ',labelId )
         print(msg_results)
         for msg in msg_results["messages"]:
             print("msg id: ", msg["id"])
