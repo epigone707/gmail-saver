@@ -32,7 +32,7 @@ Labels:
 ==============================
 ...
 ```
-Then it will print all messages in a specified label id. Here, I choose the 'testLabel' with id 'Label_7090689821639516814':
+Then it will print all messages in a specified label id. Here, I choose the 'testLabel' with id 'Label_7090689821639516814'. There're only three messages in this label:
 ```
 ...
 ==============================
