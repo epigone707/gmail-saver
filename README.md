@@ -1,4 +1,4 @@
-# gmail-saver
+# gmailSaver
 
 The gmailSaver can download emails from a gmail account by using Gmail API and extract all url links in them.
 
