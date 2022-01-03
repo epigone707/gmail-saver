@@ -6,12 +6,16 @@ The gmailSaver can download emails from a gmail account by using Gmail API and e
 You need to follow the [gmail python tutorial](https://developers.google.com/gmail/api/quickstart/python).
 
 The tutorial prerequisites contain:
+- Python 2.6 or greater.
+- The pip package management tool.
 - A Google Cloud Platform project with the API enabled. To create a project and enable an API, refer to [Create a project and enable the API](https://developers.google.com/workspace/guides/create-project). Enable the "Gmail API".
-- Authorization credentials for a desktop application. To learn how to create credentials for a desktop application, refer to [Create credentials](https://developers.google.com/workspace/guides/create-credentials)
+- Authorization credentials for a desktop application. To learn how to create credentials for a desktop application, refer to [Create credentials](https://developers.google.com/workspace/guides/create-credentials). There're 3 types of credentials. I choose [OAuth client ID credentials(application type = Desktop app)](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id).
+- A Google account with Gmail enabled.
 
-There're 3 types of credentials. I choose [OAuth client ID credentials(application type = Desktop app)](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id).
-
-
+Follow the tutorial, install the Google client library for Python, run the following command:
+```
+  pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
 After you've done, download the credential file and name it as `credentials.json` . You can then Run:
 
 ```
