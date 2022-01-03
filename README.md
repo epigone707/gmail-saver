@@ -3,7 +3,16 @@
 The gmailSaver can download emails from a gmail account by using Gmail API and extract all url links in them.
 
 # Usage
-You need to follow [gmail API tutorial](https://developers.google.com/gmail/api/quickstart/python) which will teach you how to get a credential. After you've done, you will have `credentials.json` together with `gmailUrlExtract.py` in your local folder. You can then Run:
+You need to follow the [gmail python tutorial](https://developers.google.com/gmail/api/quickstart/python).
+
+The tutorial prerequisites contain:
+- A Google Cloud Platform project with the API enabled. To create a project and enable an API, refer to [Create a project and enable the API](https://developers.google.com/workspace/guides/create-project)
+- Authorization credentials for a desktop application. To learn how to create credentials for a desktop application, refer to [Create credentials](https://developers.google.com/workspace/guides/create-credentials)
+
+There're 3 types of credentials. I choose [OAuth client ID credentials(application type = Desktop app)](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id).
+
+
+After you've done, download the credential file and name it as `credentials.json` . You can then Run:
 
 ```
 python gmailUrlExtract.py
