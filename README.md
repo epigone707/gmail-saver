@@ -49,6 +49,7 @@ Then it will print all messages in a specified label id. Here, I choose the 'tes
 ```
 ...
 ==============================
+Enter the label Id you want to scrape: Label_7090689821639516814
 print all messages info in label:  Label_7090689821639516814
 {'messages': [{'id': '17ca398c3246183d', 'threadId': '17ca398c3246183d'}, {'id': '179eb8d36ae69e8b', 'threadId': '179eb8d36ae69e8b'}, {'id': '178d983e8a8fd203', 'threadId': '178d983e8a8fd203'}], 'resultSizeEstimate': 3}
 msg id:  17ca398c3246183d
